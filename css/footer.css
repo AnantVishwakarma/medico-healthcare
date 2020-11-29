@@ -1,0 +1,52 @@
+footer {
+    font-size: large;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    background-color: #69be00;  
+}
+
+footer #information {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer #footer-nav-links {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+footer #footer-nav-links a {    
+    color: white;
+    padding: 0.2rem 0;
+    text-decoration: none;
+}
+
+footer #social-links {
+    display: flex;
+    align-items: center;
+}
+
+footer #social-links * {
+    color: white;    
+    padding: 0.3rem;
+}
+
+footer #clinic-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer #clinic-information * {
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.copyright {
+    font-size: medium;
+    margin: 0;
+    padding: 1rem;
+    color: white;
+}

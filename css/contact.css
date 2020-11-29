@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 1.3rem 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444444;
+}
+
+.container {    
+    margin: 5rem auto;
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+
+.container i {
+    color: #69be00;
+    font-size: 1.5rem;
+}
+
+.container a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: large;
+    margin: 1rem 0;
+    color: white;
+    background-color: #69be00;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.container a:hover {
+    background-color: #58a000;
+}
+
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+
+#feedback-form textarea {
+    padding: 1rem;
+    outline: none;
+    border: 1px solid gray;
+    font-size: large;
+    resize: none;
+}
+
+#feedback-form textarea:focus {
+    border: 2px solid #69be00;
+}
+
+#feedback-form button {
+    padding: 1rem;
+    font-size: large;
+    margin: 1rem 0;
+    color: white;
+    background-color: #69be00;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+#feedback-form button:hover {
+    background-color: #58a000;
+}

@@ -1,0 +1,5 @@
+
+
+Redirect /medico/header.php /medico/login.php
+Redirect /medico/footer.php /medico/login.php
+Redirect /medico/connect.php /medico/login.php

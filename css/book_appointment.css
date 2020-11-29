@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #444444;
+    font: 1.3rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 5rem auto;
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+
+.container table {
+    margin: 0 auto;
+}
+
+table,
+tr,
+th,
+td {
+    font-size: 1rem;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+th,
+td {
+    white-space: nowrap;
+}
+
+th {
+    font-weight: normal;
+}
+
+.app_dt_available {
+    background-color: #fff9e2;
+    transition: background-color 200ms;
+}
+
+.app_dt_available:hover {
+    background-color: coral;
+}
+
+.app_dt_unavailable {
+    background-color: gray;
+}
+
+#appointment_form button {
+    padding: 0.8rem;
+    font-size: large;
+    color: white;
+    background-color: #69be00;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+#appointment_form button:hover {
+    background-color: #58a000;
+}
+
+#appointment_form button:disabled {
+    background-color: #b0c497;
+    cursor: not-allowed;
+}
+
+#error_message {
+    color: red;
+}

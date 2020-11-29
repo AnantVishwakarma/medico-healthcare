@@ -1,0 +1,145 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 1.3rem 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#bg-img {
+    position: relative;
+}
+
+#bg-img img {    
+    width: 100%;
+}
+
+#bg-img div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 1rem;
+    left: 1rem;
+    width: 30%;
+    padding: 1rem;
+    color: white;
+    background-color: #000000AA;
+}
+
+#bg-img div * {
+    margin: 1rem;
+}
+
+#bg-img div p {
+    text-align: center;
+    font-size: medium;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+#bg-img div hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(90deg, transparent, gray, transparent);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: large;
+    color: white;
+    background: none;
+    background-color: #69be00;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.btn:hover {
+    background-color: #58a000;
+}
+
+#appointment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 20rem;
+    /* background-color: aqua; */
+}
+
+#appointment-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: blueviolet; */
+}
+
+#appointment-info h2{
+    margin: 0.5rem 0;
+}
+
+#appointment-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+}
+
+#appointment-btn * {
+    margin: 0.5rem 0;
+}
+
+
+/***************************Heading****************************/
+
+.heading {
+    display: flex;
+    font-weight: 400;
+    margin: 2rem 0;
+    color: #2e2e2e;
+}
+
+.heading::before, .heading::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #6e6e6e;
+    margin: auto 1rem;
+}
+
+/*************************Facilities***************************/
+
+#facilities {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+    /* background-color: aqua; */
+}
+
+.facility-card {
+    margin: 2rem 6.66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.facility-card * {
+    margin: 0.2rem;
+    text-align: center;
+}
+
+.facility-card p {
+    font-size: medium;
+}
+
+.facility-card i {
+    font-size: xx-large;
+    color: #69be00;
+}

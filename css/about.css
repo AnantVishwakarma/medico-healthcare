@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 1.3rem 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about-container {
+    color: #444444;
+    margin: 5rem;
+}
+
+#about-container p {
+    font-size: large;
+    margin: 2rem 0;
+}
+
+#map {
+    color: #444444;
+    margin: 5rem;
+}

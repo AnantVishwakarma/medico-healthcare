@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 1.3rem 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#bg-img {
+    position: relative;
+}
+
+#bg-img img {
+    width: 100%;
+}
+
+#welcome {
+    background-color: #69be00;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    padding: 3rem;
+    text-align: center;    
+    color: white;
+}
+
+#welcome p {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 3rem;
+}
+
+/**************************************Heading**************************************/
+
+.heading {
+    display: flex;
+    font-weight: 400;
+    margin: 5rem 0;
+    color: #2e2e2e;
+}
+
+.heading::before, .heading::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #6e6e6e;
+    margin: auto 1rem;
+}
+
+/**************************************Account Information**************************************/
+
+#patient-details {
+    display: flex;
+    width: fit-content;
+    /* flex-wrap: wrap; */
+    /* background-color: aqua; */
+}
+
+#patient-details img {
+    border: 1px solid #888888;
+    margin: 2rem;
+}
+
+#patient-details > div {
+    color: #1b1b1b;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    /* background-color: blueviolet; */
+}
+
+#patient-data th, #patient-data td {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+#patient-data th {
+    width: fit-content;
+    white-space: nowrap; /*https://stackoverflow.com/questions/3379220/how-to-limit-a-table-cell-to-one-line-of-text-using-css*/
+    text-align: left;
+}
+
+
+/**************************************Get Started**************************************/
+
+#appointment {
+    color: #1b1b1b;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#appointment-info {
+    width: fit-content;
+    height: fit-content;
+}
+
+#appointment-info h2{
+    margin: 0 1rem;
+}
+
+#timings {
+    margin: 0 0 1rem 0;
+}
+
+#timings td {
+    font-size: large;
+    padding: 0 1rem;
+}
+/*
+#appointment-form {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    width: fit-content;
+    border: 1px solid #888888;
+}
+
+#appointment-form h2 {
+    margin: 2rem auto;
+}
+*/
+/* #appointment-form input[type="datetime-local"] {
+    font-size: large;
+    padding: 0.5rem;
+}
+
+#appointment-form label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+} */
+/*
+#appointment-form > textarea, #appointment-form > select{
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+#appointment-form > textarea {
+    font-size: 1rem;
+    resize: none;
+}
+*/
+#appointment a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: large;
+    margin: 1rem 0;
+    color: white;
+    background-color: #69be00;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+#appointment a:hover {
+    background-color: #58a000;
+}
+
+/**************************************Other Links**************************************/
+
+#other-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f0ffd2;
+    margin-top: 5rem;
+}
+
+#other-links a {    
+    text-decoration: none;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 1rem 0;
+    color: #1b1b1b;    
+    transition: box-shadow 200ms, background-color 200ms;
+}
+
+#other-links a:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px #888888;
+}
+
+#other-links a i {
+    font-size: 5rem;
+    margin: 1rem;
+}
+
+/************************************************************************************************
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 2.5rem 0;
+    border: 1px solid #707070;
+    cursor: pointer;
+    transition: background-color, box-shadow 200ms;
+    color: #1b1b1b;
+}
+
+.container a:hover {
+    border: none;
+    background-color: #FFFFFF88;
+    box-shadow: 0 0 10px 1px gray;
+}
+
+.container a * {
+    padding: 0.5rem;
+}
+
+.container a i {
+    font-size: 6rem;
+}
+
+@media (max-width: 576px) {
+    .container a {
+        width: 90%;
+        margin: 5%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .container a {
+        width: 45%;
+        margin: 2.5%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container a {
+        width: 30%;
+        margin: 1.66%;
+    }
+}
+
+*/
