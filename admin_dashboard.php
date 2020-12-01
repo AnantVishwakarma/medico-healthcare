@@ -1,4 +1,7 @@
 <?php
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+
 session_start();
 
 date_default_timezone_set('Asia/Kolkata');
@@ -11,9 +14,11 @@ include('connect.php');
 
 if (isset($_POST['submit'])) {
     $message = "";
-    $patient_id = $_POST['patient_id'];
+    $patient_id = (int)$_POST['patient_id'];    
+    //$patient_type = (int)$_POST['patient_type'];
     $stmt = $conn->prepare("SELECT * FROM patients WHERE patient_id=?");
     $stmt->bind_param("i", $patient_id);
+    echo $stmt->error;
     if ($stmt->execute()) {
         $result = $stmt->get_result();
         if ($result->num_rows == 0) {
@@ -134,7 +139,7 @@ if (isset($_POST['submit'])) {
         <form action="#" method="POST" enctype="multipart/form-data" id="upload-form">
             <input type="number" name="patient_id" placeholder="Patient ID" required>
             <select name="patient_type">
-                <option value="1">Online</option>
+                <option selected value="1">Online</option>
                 <option value="0">Offline</option>
             </select>
             <input type="file" name="health_report" required>
