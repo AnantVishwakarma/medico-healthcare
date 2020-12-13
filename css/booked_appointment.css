@@ -8,28 +8,22 @@ body {
 .container {
     margin: 5rem auto;
     text-align: center;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
     /* background-color: blueviolet; */
 }
 
-.container a {
+.link {
     display: inline-block;
     text-decoration: none;
-    padding: 1rem;
     font-size: large;
-    margin: 1rem 0;
     color: white;
-    background-color: #69be00;
+    padding: 0.8rem;
     border-radius: 5px;
-    border: none;
-    outline: none;
+    background-color: #69be00;
     cursor: pointer;
     transition: background-color 200ms;
 }
 
-.container a:hover {
+.link:hover {
     background-color: #58a000;
 }
 
@@ -41,3 +35,65 @@ body {
     font-size: 4rem;
     color: #69be00;
 }
+
+.btn {
+    display: inline-block;
+    font-weight: normal;
+    padding: 1rem;
+    font-size: large;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.danger {
+    color: white;
+    background-color: #ee0000;
+    transition: background-color 200ms;
+}
+
+.danger:hover {
+    background-color: #bb0000;
+}
+
+.safe {
+    color: white;
+    background-color: #69be00;
+    transition: background-color 200ms;
+}
+
+.safe:hover {
+    background-color: #58a000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    position: absolute;
+    background-color: #fefefe;
+    border-radius: 10px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border: 1px solid #888;
+    width: fit-content;
+    text-align: center;
+}
+
+

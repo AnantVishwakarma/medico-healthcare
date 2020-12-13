@@ -153,6 +153,7 @@ if (isset($_POST['submit'])) {
 
 <!-- 
     Pending:
-    Prevent user To read report of other patient
+    Cancel Appointment and mail notification
     Upload document for offline patients
+
  -->

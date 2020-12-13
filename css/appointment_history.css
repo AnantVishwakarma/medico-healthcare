@@ -34,3 +34,8 @@ th,td {
     background-color: #be0000;
     color: white;
 }
+
+.app-attended {
+    background-color: #0275d8;
+    color: white;
+}

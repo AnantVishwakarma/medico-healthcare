@@ -10,7 +10,7 @@ if (!isset($_SESSION['id'])) {
 
 $patient_id = $_SESSION['id'];
 
-$stmt = $conn->prepare("SELECT appointment_id, app_date, date_format(app_time, '%H:%i') as app_time, `status` FROM appointments WHERE patient_id=? ORDER BY app_date DESC;");
+$stmt = $conn->prepare("SELECT appointment_id, app_date, date_format(app_time, '%H:%i') as app_time, `status` FROM appointments WHERE patient_id=? ORDER BY app_date DESC, app_time DESC, `status` DESC;");
 $stmt->bind_param("i", $patient_id);
 if ($stmt->execute()) {
     $result = $stmt->get_result();
@@ -61,11 +61,18 @@ $conn->close();
                 foreach ($app_details as $key => $value) {
                     echo "<tr>";
                     echo "<td>" . $key . "</td><td>" . date("D, d M Y", strtotime($value['app_date'])) . "</td><td>" . date("h:i a", strtotime($value['app_time'])) . "</td>";
-                    if ($value['status'] == 1) {
-                        echo "<td class='app-booked'>Booked</td>";
-                    } else {
-                        echo "<td class='app-cancelled'>Cancelled</td>";
-                    }
+                    switch($value['status'])
+                    {
+                        case 0:
+                            echo "<td class='app-cancelled'>Cancelled</td>";
+                        break;
+                        case 1:
+                            echo "<td class='app-booked'>Booked</td>";
+                        break;
+                        case 2:
+                            echo "<td class='app-attended'>Attended</td>";
+                        break;
+                    }                    
                     echo "</tr>";
                 }
                 ?>

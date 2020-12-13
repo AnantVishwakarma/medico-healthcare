@@ -2,6 +2,11 @@ const appointment_form = document.getElementById("appointment_form");
 const app_dt_available = document.getElementsByClassName("app_dt_available");
 for (btn of app_dt_available) {
     btn.addEventListener("click", function () {
+        for (btn of app_dt_available)
+        {
+            btn.classList.remove("app_dt_selected");
+        }
+        this.classList.add("app_dt_selected");
         document.getElementById("error_message").innerHTML = "";
         //console.log(this.getAttribute("data-date") + " " + this.getAttribute("data-time"));
         appointment_form.app_date.value = this.getAttribute("data-date");

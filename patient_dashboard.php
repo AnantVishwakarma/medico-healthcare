@@ -52,7 +52,8 @@ $conn->close();
         <img src="./assets/images/dashboard_background.jpg">
 
         <div id="welcome">
-            <p>Welcome <?php echo $db_user_name; ?></p>
+            <span>Welcome</span>
+            <p><?php echo $db_user_name; ?></p>
             <small>Hope you are well!</small>
         </div>
     </div>

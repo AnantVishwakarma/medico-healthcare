@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #444444;
+    font: 1.3rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 5rem auto;
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+
+.container h3 {
+    font-weight: normal;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 5px;
+    background-color: #69be00;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.link:hover {
+    background-color: #58a000;
+}

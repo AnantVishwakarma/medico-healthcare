@@ -44,6 +44,10 @@ th {
     background-color: coral;
 }
 
+.app_dt_selected {
+    background-color: #69be00;
+}
+
 .app_dt_unavailable {
     background-color: gray;
 }
