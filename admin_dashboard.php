@@ -14,7 +14,7 @@ include('connect.php');
 
 if (isset($_POST['submit'])) {
     $message = "";
-    $patient_id = (int)$_POST['patient_id'];    
+    $patient_id = (int)$_POST['patient_id'];
     //$patient_type = (int)$_POST['patient_type'];
     $stmt = $conn->prepare("SELECT * FROM patients WHERE patient_id=?");
     $stmt->bind_param("i", $patient_id);
