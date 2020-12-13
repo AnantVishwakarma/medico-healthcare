@@ -74,7 +74,7 @@ if (isset($_POST['app_date']) && isset($_POST['app_time'])) {
     $app_date = $_POST['app_date'];
     $app_time = $_POST['app_time'];
     if (isAvailable($appointments, $app_date, $app_time)) {
-        $status = 1; //status=> 1 - booked, 0 - cancelled 
+        $status = 1; //status=> 0 - cancelled, 1 - booked, 2 - attended
         $patient_type = 1; //patient_type=> 1 - online, 0 - offline
 
         $stmt = $conn->prepare("INSERT INTO appointments (`app_date`, `app_time`, `status`, `patient_type`, `patient_id`) VALUES (?,?,?,?,?);");

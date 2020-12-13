@@ -14,8 +14,6 @@ $stmt->bind_param("i", $patient_id);
 if ($stmt->execute()) {
     $result = $stmt->get_result();
 
-    //$db_user_name = $db_user_dob = $db_user_sex = $db_user_phno = $db_user_email = $db_user_address = "";
-
     while ($row = $result->fetch_assoc()) {
         $db_user_name = $row['patient_name'];
         $db_user_dob = $row['date_of_birth'];
@@ -45,9 +43,8 @@ $conn->close();
 </head>
 
 <body>
-    <?php
-    include('header.php');
-    ?>
+    <?php include('header.php'); ?>
+    
     <div id="bg-img">
         <img src="./assets/images/dashboard_background.jpg">
 
@@ -130,9 +127,8 @@ $conn->close();
     </div>
 
     <script src="./js/patient_dashboard.js"></script>
-    <?php
-    include('footer.php');
-    ?>
+
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

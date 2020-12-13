@@ -77,7 +77,7 @@ function checkValidity($connection, $email, $token)
                 $stmt = $conn->prepare("UPDATE patients SET `password`=? WHERE `email`=?;");
                 $stmt->bind_param("ss", $hashed_password, $email);
                 if ($stmt->execute()) {
-                    echo "<h3>Password Changed Successfully</h3>";
+                    echo "<h3>Password Changed Successfully</h3>";                    
                     //Delete Token
                     $stmt = $conn->prepare("DELETE FROM forgot_password WHERE `email`=?;");
                     $stmt->bind_param("s", $email);
@@ -85,13 +85,14 @@ function checkValidity($connection, $email, $token)
                         echo "<h3>Unable To Delete Token</h3>";
                     }
                 } else {
-                    echo $stmt->error;
+                    //echo $stmt->error;
                     echo "<h3>Internal Server Error Occured</h3>";
                 }
                 $stmt->close();
             } else {
                 echo "<h3>" . $validity . "</h3>";
             }
+            echo "<a class='link' href='login.php'>Go To Login Page</a>";
         } else {
             header("Location: login.php");
         }

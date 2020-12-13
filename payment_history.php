@@ -92,13 +92,10 @@ $conn->close();
                     echo "<tr>";
                     echo "<td>" . $key . "</td>";
                     echo "<td>" . date("D, d M Y", strtotime($value['payment_timestamp'])) . "</td>";
-                    echo "<td>" . date("h:i:s a", strtotime($value['payment_timestamp'])) . "</td>";
+                    echo "<td>" . date("h:i a", strtotime($value['payment_timestamp'])) . "</td>";
                     switch ($value['payment_type']) {
-                        case 0:
-                            echo "<td>Consultancy</td>";
-                            break;
                         case 1:
-                            echo "<td>Appointment</td>";
+                            echo "<td>Consultancy</td>";
                             break;
                         case 2:
                             echo "<td>Lab Test</td>";
